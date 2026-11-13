@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -20,7 +21,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        app:itemActiveIndicatorStyle="@style/CustomActiveIndicator"
         app:itemIconGravity="top"
         app:itemPaddingBottom="0dp"
         app:itemPaddingTop="0dp"

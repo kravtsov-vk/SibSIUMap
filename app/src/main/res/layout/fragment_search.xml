@@ -1,14 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchFragment">
+    tools:context=".SearchFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Поиск"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            app:cardBackgroundColor="#F5F6F8"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_building" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/rectangle_background"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Этаж"
+                android:textAlignment="center" />
+
+            <RadioGroup
+                android:id="@+id/sel_floor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/fl2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/fl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/fl2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/fl3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/fl4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/fl5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/fl6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_button_text_color" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:queryHint="Найти аудиторию">
+
+        </androidx.appcompat.widget.SearchView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_fl_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="На 2 этаже"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/id_no_rooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="32 аудитории"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

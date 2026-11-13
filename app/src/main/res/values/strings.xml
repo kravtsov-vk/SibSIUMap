@@ -2,4 +2,16 @@
     <string name="app_name">SibSIUMap</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Buildings">
+        <item>Горно-Технологический</item>
+        <item>Металлургический</item>
+    </string-array>
+
+    <string name="lib_link"><a href="https://library.sibsiu.ru/">Библиотека университета</a></string>
+
+    <string name="info_1"><a href="https://www.sibsiu.ru/">Сайт СибГИУ</a></string>
+    <string name="info_2"><a href="https://do.sibsiu.ru/day/">СУО Moodle СибГИУ</a></string>
+    <string name="info_3"><a href="https://www.sibsiu.ru/for-student/class-schedule/">Расписание занятий</a></string>
+    <string name="info_4"><a href="https://www.sibsiu.ru/universitet/podrazdeleniya/otdely/muzey-istorii-sibgiu/eksponaty-muzeya-sibgiu/">Музей истории СибГИУ</a></string>
 </resources>
